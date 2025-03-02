@@ -19,7 +19,6 @@ import java.util.Set;
  */
 public class BeanController extends AbstractAutowireCapableBeanFactory {
 
-
     @Override
     public <T> NamedBeanHolder<T> resolveNamedBean(Class<T> aClass) throws BeansException {
         return null;
