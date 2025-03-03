@@ -1,6 +1,6 @@
-package com.meiqiu.异常处理;
+package com.meiqiu.exception;
 
-import com.meiqiu.返回封装.ResultCode;
+import com.meiqiu.base.ResultCode;
 
 /**
  * @Description 封装异常信息

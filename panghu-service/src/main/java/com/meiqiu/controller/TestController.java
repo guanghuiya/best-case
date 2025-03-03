@@ -2,15 +2,11 @@ package com.meiqiu.controller;
 
 import cn.hutool.json.JSONObject;
 import com.meiqiu.feign.MeiqiuServiceFeign;
-import com.meiqiu.返回封装.BizResult;
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import com.meiqiu.base.BizResult;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.lang.reflect.Method;
 
 /**
  * @Description
@@ -19,6 +15,7 @@ import java.lang.reflect.Method;
  * @Time 21:21
  */
 @RestController
+@RequestMapping
 public class TestController {
 
     @Autowired

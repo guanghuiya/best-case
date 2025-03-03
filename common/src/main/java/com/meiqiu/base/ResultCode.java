@@ -1,4 +1,4 @@
-package com.meiqiu.返回封装;
+package com.meiqiu.base;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

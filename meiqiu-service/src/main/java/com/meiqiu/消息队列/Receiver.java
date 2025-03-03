@@ -1,5 +1,6 @@
 package com.meiqiu.消息队列;
 
+import com.meiqiu.base.MyConstant;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -41,7 +42,7 @@ public class Receiver {
             channel.basicAck(deliveryTag, false);
             System.out.println("Message acknowledged");
             // 将消息ID保存到Redis中，用于标记消息已处理,并且设置过期时间为 60分钟，防止内存占用过多
-            redisTemplate.opsForValue().set(REDIS_MESSAGE_KEY_PREFIX + messageId, "true", 60, TimeUnit.MINUTES);
+            redisTemplate.opsForValue().set(MyConstant.REDIS_MESSAGE_KEY_PREFIX + messageId, "true", 60, TimeUnit.MINUTES);
         } catch (Exception e) {
             // 处理消息失败，拒绝消息并重新入队
             channel.basicNack(deliveryTag, false, true);

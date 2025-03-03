@@ -1,4 +1,4 @@
-package com.meiqiu.代码生成;
+package com.meiqiu;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
@@ -31,7 +31,8 @@ public class FastAutoGenerator {
                             .commentDate("yyyy-MM-dd hh:mm:ss")
                             .dateType(DateType.ONLY_DATE)
                             .disableOpenDir()
-                            .fileOverride();            //开启覆盖之前生成的文件
+//                            .fileOverride()//开启覆盖之前生成的文件
+                    ;
 
                 })
                 .packageConfig(builder -> {
@@ -42,7 +43,7 @@ public class FastAutoGenerator {
                             .controller("controller")
                             .mapper("mapper")
                             .xml("mapper")
-                            .pathInfo(Collections.singletonMap(OutputFile.mapperXml, userDir + "/src/main/resources/mapper"));
+                            .pathInfo(Collections.singletonMap(OutputFile.xml, userDir + "/src/main/resources/mapper"));
                 })
                 .strategyConfig(builder -> {
                     builder.addInclude(tables)
@@ -64,7 +65,6 @@ public class FastAutoGenerator {
                             .enableBaseResultMap()
                             .superClass(BaseMapper.class)
                             .formatMapperFileName("%sMapper")
-                            .enableMapperAnnotation()
                             .formatXmlFileName("%sMapper");
                     builder.entityBuilder()
                             .versionColumnName("version")

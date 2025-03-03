@@ -1,6 +1,6 @@
 package com.meiqiu.异步线程池;
 
-import com.meiqiu.返回封装.BizResult;
+import com.meiqiu.base.BizResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

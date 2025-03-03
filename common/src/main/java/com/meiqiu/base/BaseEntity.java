@@ -4,8 +4,6 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
@@ -31,9 +29,6 @@ public class BaseEntity implements Serializable {
     )
     private Integer id;
 
-    @JsonSerialize(
-            using = ToStringSerializer.class
-    )
     @ApiModelProperty("创建人")
     private Integer createUser;
 
@@ -46,9 +41,6 @@ public class BaseEntity implements Serializable {
     @ApiModelProperty("创建时间")
     private LocalDateTime createTime;
 
-    @JsonSerialize(
-            using = ToStringSerializer.class
-    )
     @ApiModelProperty("更新人")
     private Integer updateUser;
 

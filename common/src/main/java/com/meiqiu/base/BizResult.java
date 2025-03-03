@@ -1,4 +1,4 @@
-package com.meiqiu.返回封装;
+package com.meiqiu.base;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

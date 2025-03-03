@@ -4,7 +4,7 @@ import com.meiqiu.dto.LoginDTO;
 import com.meiqiu.dto.RegisterUserDTO;
 import com.meiqiu.service.UserService;
 import com.meiqiu.vo.LoginVo;
-import com.meiqiu.返回封装.BizResult;
+import com.meiqiu.base.BizResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

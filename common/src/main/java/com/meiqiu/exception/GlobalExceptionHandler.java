@@ -1,4 +1,4 @@
-package com.meiqiu.异常处理;
+package com.meiqiu.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -54,7 +54,7 @@ public class GlobalExceptionHandler {
         } else {
             errorResponse.setCode("500");
             errorResponse.setMessage(ex.getMessage());
-            return ResponseEntity.internalServerError().body(errorResponse);
+            return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 

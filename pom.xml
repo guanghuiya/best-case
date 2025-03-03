@@ -19,8 +19,6 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
-        <spring-cloud-dependencies.version>2021.0.3</spring-cloud-dependencies.version>
         <java.version>1.8</java.version>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring.boot.version>2.7.2</spring.boot.version>
@@ -29,9 +27,10 @@
         <hutool.version>5.6.5</hutool.version>
         <alibaba.druid.version>1.2.8</alibaba.druid.version>
         <log4j.version>1.2.12</log4j.version>
-        <mybatis-plus-version>3.5.2</mybatis-plus-version>
+        <mybatis-plus-version>3.5.3.1</mybatis-plus-version>
         <mysql.version>8.0.23</mysql.version>
         <freemarker.version>2.3.30</freemarker.version>
+        <spring-cloud-openfeign.version>3.1.6</spring-cloud-openfeign.version>
     </properties>
 
     <!-- 管理项目依赖的版本和传递性，父pom统一管理-->
@@ -42,14 +41,15 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba</artifactId>
-                <version>${spring-cloud-alibaba.version}</version>
+                <version>2021.0.6.1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud-dependencies.version}</version>
+                <version>2021.0.6</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -150,6 +150,19 @@
                 <artifactId>spring-boot-starter-amqp</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${spring-cloud-openfeign.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+                <version>${spring-cloud-openfeign.version}</version>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
 </project>
