@@ -1,15 +1,7 @@
 ## GGS仅供个人实践
 
 ### 项目规划
-- jdk 1.8
-- maven
-- springboot
-- 全局异常处理
-- 线程池
 - swagger2 : http://localhost:8080/api/swagger-ui.html
-- mysql
-- mybatisPlus + generator代码生成器
-- redis
 - nacos
 - 三级缓存
 - 缓存一致性问题
@@ -52,6 +44,8 @@
 - kafka
 - zk
 - 高并发
+- 云ci/cd
+- jenkins
 - 
 - 
 

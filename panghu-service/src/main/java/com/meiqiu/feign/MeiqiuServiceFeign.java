@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Date 2025/3/2
  * @Time 21:02
  */
-//@FeignClient(name = "meiqiu-service")
- @FeignClient(name = "meiqiu-service",url = "http://localhost:8080")
-// @FeignClient(name = "meiqiu-service",url = "localhost:8080")
+ @FeignClient(name = "meiqiu-service")
+// @FeignClient(name = "meiqiu-service",url = "http://localhost:8080")
 public interface MeiqiuServiceFeign {
 
     @ApiOperation(value = "异步生效测试")
